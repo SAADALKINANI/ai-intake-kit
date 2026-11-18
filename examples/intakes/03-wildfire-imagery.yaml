@@ -1,0 +1,21 @@
+use_case_name: Wildfire smoke detection from satellite imagery
+agency: Example Agency
+bureau: Earth Observation Office
+contact_email: eo-ai@example.gov
+development_stage: Pre-deployment
+topic_area: Science
+classification: Computer Vision
+problem_solved: Analysts manually scan imagery to find new smoke plumes, which delays situational awareness.
+benefits: Earlier detection supports research datasets and situational awareness products.
+system_outputs: Polygons of likely smoke plumes with a confidence value, reviewed by analysts before publication.
+contracting_usage: In-house Development
+has_custom_code: true
+code_url: https://github.com/example/smoke-detect
+data:
+  description: Labeled satellite scenes from public archives.
+  has_pii: false
+decision_role:
+  description: Outputs feed a research product; emergency services make dispatch decisions using their own systems.
+  principal_basis: false
+  effect_areas: []
+  presumed_categories: []

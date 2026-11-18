@@ -1,0 +1,81 @@
+# AI use case intake form
+# Fill this in before acquiring, building or piloting an AI capability, then run:
+#   aiintake assess this-file.yaml
+# Field names follow the 2025 Federal AI Use Case Inventory where possible.
+
+use_case_name: ""
+agency: ""
+bureau: ""
+contact_email: ""
+
+# Pre-deployment | Pilot | Deployed | Retired
+development_stage: Pre-deployment
+
+# Administrative Functions | Cybersecurity | Emergency Management | Energy and the Environment |
+# Government Benefits Processing | Health and Medical | Human Resources | Information Technology |
+# International Affairs | Law Enforcement | Other | Procurement and Financial Management | Science |
+# Service Delivery | Transportation
+topic_area: ""
+
+# Agentic AI | Classical/Predictive Machine Learning | Computer Vision | Generative AI |
+# Natural Language Processing | Reinforcement Learning
+classification: ""
+
+problem_solved: ""      # What problem does the AI address?
+benefits: ""            # Expected benefits (time saved, accuracy, service quality)
+system_outputs: ""      # What does the AI produce (scores, flags, drafts, labels)?
+operational_date: ""    # YYYY-MM-DD, if deployed
+
+# Vendor Purchased | In-house Development | Contracting and In House
+contracting_usage: ""
+vendor_name: ""
+have_ato: false
+system_name_ato: ""
+has_custom_code: false
+code_url: ""
+
+data:
+  description: ""       # Agency data used to train, fine-tune or evaluate the model
+  has_pii: false
+  pia_url: ""
+  demographic_features: []   # e.g. [age, sex, race/ethnicity] if used as model features
+
+# --- High-impact screening (OMB M-25-21 sections 5 and 6) ---
+decision_role:
+  description: ""       # How is the output used? Who acts on it?
+  # Is the AI output a *principal basis* for a decision or action?
+  principal_basis: null
+  # Which areas could that decision significantly affect? Any of:
+  # civil_rights, access_programs, government_services, health_safety,
+  # critical_infrastructure, strategic_assets
+  effect_areas: []
+  # Presumed high-impact purposes that apply (see docs/02-high-impact-determination.md):
+  # safety_critical_infrastructure, physical_movement, attack_or_defense, hazardous_materials,
+  # safety_critical_design, healthcare, facility_access, sanctions_trade, protected_speech,
+  # law_enforcement, immigration, biometric_public, benefits, employment, binding_translation
+  presumed_categories: []
+  # Required only if a presumed category applies but you conclude it is NOT high-impact
+  not_high_impact_justification: ""
+
+# --- Minimum practices (only required for high-impact AI) ---
+# Status values: Yes | In-progress | Waived | No
+#   independent_review: Yes - other office | Yes - oversight board | Yes - CAIO | In-progress | Waived | No
+#   failsafe: also "Not applicable"; appeal_process: also "Not applicable" or "Precluded by law"
+#   public_feedback: list of Direct usability testing | General solicitations of feedback |
+#                    Public hearings or meetings | Other   (or In-progress | Waived)
+practices:
+  pre_deployment_testing: No
+  impact_assessment: No
+  independent_review: No
+  ongoing_monitoring: No
+  operator_training: No
+  failsafe: No
+  appeal_process: No
+  public_feedback: []
+  potential_impacts: ""   # Foreseeable impacts on privacy, civil rights and civil liberties
+
+# Pilots may be exempt from the practices only if ALL of these hold
+pilot_exemption:
+  certified_by_caio: false
+  limited_scale_and_duration: false
+  opt_out_available: false

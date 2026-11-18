@@ -1,0 +1,36 @@
+use_case_name: Benefit claim fraud risk scoring
+agency: Example Agency
+bureau: Office of Program Integrity
+contact_email: integrity-ai@example.gov
+development_stage: Deployed
+topic_area: Government Benefits Processing
+classification: Classical/Predictive Machine Learning
+problem_solved: Investigators can only review a small share of claims and need to prioritize likely improper payments.
+benefits: Higher recovery of improper payments per investigator hour.
+system_outputs: A fraud risk score per claim; claims above a threshold are routed for investigation and payment is held.
+operational_date: 2024-10-01
+contracting_usage: Contracting and In House
+vendor_name: Example Analytics LLC
+have_ato: true
+system_name_ato: Program Integrity Analytics Platform
+has_custom_code: true
+data:
+  description: Five years of adjudicated claims with investigation outcomes.
+  has_pii: true
+  pia_url: https://www.example.gov/privacy/pia-integrity-analytics
+  demographic_features: [age]
+decision_role:
+  description: Claims above the score threshold have payment held pending investigation.
+  principal_basis: true
+  effect_areas: [government_services, civil_rights]
+  presumed_categories: [benefits]
+practices:
+  pre_deployment_testing: Yes
+  impact_assessment: Yes
+  independent_review: Yes - oversight board
+  ongoing_monitoring: In-progress
+  operator_training: Yes
+  failsafe: Yes
+  appeal_process: In-progress
+  public_feedback: []
+  potential_impacts: Legitimate claimants could face delayed payments; error rates may differ across age groups.

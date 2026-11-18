@@ -1,0 +1,23 @@
+use_case_name: Website FAQ assistant
+agency: Example Agency
+bureau: Office of Public Engagement
+contact_email: ai-inquiries@example.gov
+development_stage: Pilot
+topic_area: Service Delivery
+classification: Generative AI
+problem_solved: Visitors struggle to find answers to common questions on the agency website.
+benefits: Faster answers for the public and fewer routine calls to the contact center.
+system_outputs: Draft answers with links to the official web pages they are drawn from.
+contracting_usage: Vendor Purchased
+vendor_name: Example Cloud Vendor
+have_ato: true
+system_name_ato: Public Web Platform
+has_custom_code: false
+data:
+  description: Published agency web pages only.
+  has_pii: false
+decision_role:
+  description: Answers are informational and always link to the source page; no decisions are made about the user.
+  principal_basis: false
+  effect_areas: []
+  presumed_categories: []
